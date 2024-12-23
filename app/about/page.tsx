@@ -5,9 +5,12 @@ import JumpToPagePlugin from "@/common/jumpToPagePlugin";
 import { getMediaPathname } from "@/common/pathHelper";
 import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ScrollMode, Viewer, Worker } from "@react-pdf-viewer/core";
+import { ScrollMode, Worker } from "@react-pdf-viewer/core";
 import Image from "next/image";
 import { useEffect, useState } from "react";
+import dynamic from 'next/dynamic';
+
+const Viewer = dynamic(() => import('@react-pdf-viewer/core').then((mod) => mod.Viewer), { ssr: false });
 
 export default function About() {
     const [currentPage, setCurrentPage] = useState(0);

@@ -4,10 +4,12 @@ import { getMediaPathname } from "@/common/pathHelper";
 import { faBell, faChevronLeft, faChevronRight, faGraduationCap, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useEffect, useState } from "react";
-import { ScrollMode, Viewer, Worker } from '@react-pdf-viewer/core';
+import { ScrollMode, Worker } from '@react-pdf-viewer/core';
 import { disableScrollPlugin } from "@/common/disableScrollPlugin";
 import JumpToPagePlugin from "@/common/jumpToPagePlugin";
-import '@react-pdf-viewer/core/lib/styles/index.css';
+import dynamic from 'next/dynamic';
+
+const Viewer = dynamic(() => import('@react-pdf-viewer/core').then((mod) => mod.Viewer), { ssr: false });
 
 export default function Results() {
     const [currentPage, setCurrentPage] = useState(0);
