@@ -3,7 +3,7 @@
 import { disableScrollPlugin } from "@/common/disableScrollPlugin";
 import JumpToPagePlugin from "@/common/jumpToPagePlugin";
 import { getMediaPathname } from "@/common/pathHelper";
-import { faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faCheck, faChevronLeft, faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { ScrollMode, Worker } from "@react-pdf-viewer/core";
 import Image from "next/image";
@@ -89,14 +89,18 @@ export default function About() {
                                 {/* third row */}
                                 <div className="col-span-1">
                                     <div className="relative mb-12 before:w-0 before:h-0 before:box-border before:border-t-[35px] before:border-t-transparent before:border-r-[35px] before:border-r-[#f7f7f7] before:bottom-9 before:absolute before:right-1 before:-z-10 after:box-border after:w-9 after:h-9 after:absolute after:right-1 after:-z-10 after:bottom-0 after:bg-[#f7f7f7]">
-                                        <span className="text-primary font-teko text-6xl">✔</span>
+                                        <span className="text-primary font-teko text-6xl">
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </span>
                                         <p className="text-xs font-medium uppercase tracking-[0.12em] mt-6">Повећана ефикасност кроз рационализацију коришћених ресурса</p>
                                     </div>
                                 </div>
 
                                 <div className="col-span-1">
                                     <div className="relative mb-12 before:w-0 before:h-0 before:box-border before:border-t-[35px] before:border-t-transparent before:border-r-[35px] before:border-r-[#f7f7f7] before:bottom-9 before:absolute before:right-1 before:-z-10 after:box-border after:w-9 after:h-9 after:absolute after:right-1 after:-z-10 after:bottom-0 after:bg-[#f7f7f7]">
-                                        <span className="text-primary font-teko text-6xl">✔</span>
+                                        <span className="text-primary font-teko text-6xl">
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </span>
                                         <p className="text-xs font-medium uppercase tracking-[0.12em] mt-6">Елиминисане грешке проузроковане људским фактором</p>
                                     </div>
                                 </div>
@@ -105,14 +109,18 @@ export default function About() {
                                 {/* fourth row */}
                                 <div className="col-span-1">
                                     <div className="relative mb-12 before:w-0 before:h-0 before:box-border before:border-t-[35px] before:border-t-transparent before:border-r-[35px] before:border-r-[#f7f7f7] before:bottom-9 before:absolute before:right-1 before:-z-10 after:box-border after:w-9 after:h-9 after:absolute after:right-1 after:-z-10 after:bottom-0 after:bg-[#f7f7f7]">
-                                        <span className="text-primary font-teko text-6xl">✔</span>
+                                        <span className="text-primary font-teko text-6xl">
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </span>
                                         <p className="text-xs font-medium uppercase tracking-[0.12em] mt-6">Обезбеђена <br />транспарентност кроз директан увид у прегледане тестове</p>
                                     </div>
                                 </div>
 
                                 <div className="col-span-1">
                                     <div className="relative mb-12 before:w-0 before:h-0 before:box-border before:border-t-[35px] before:border-t-transparent before:border-r-[35px] before:border-r-[#f7f7f7] before:bottom-9 before:absolute before:right-1 before:-z-10 after:box-border after:w-9 after:h-9 after:absolute after:right-1 after:-z-10 after:bottom-0 after:bg-[#f7f7f7]">
-                                        <span className="text-primary font-teko text-6xl">✔</span>
+                                        <span className="text-primary font-teko text-6xl">
+                                            <FontAwesomeIcon icon={faCheck} />
+                                        </span>
                                         <p className="text-xs font-medium uppercase tracking-[0.12em] mt-6">Омогућена <br />анализа резултата <br />зарад <br />будућих тестирања</p>
                                     </div>
                                 </div>
