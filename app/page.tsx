@@ -1,6 +1,7 @@
 'use client'
 
 import { getMediaPathname } from "@/common/pathHelper";
+import CommentsSlider from "@/components/CommentsSlider";
 import { faBell, faGraduationCap, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -472,23 +473,59 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block bg-[#1e2236] text-white py-28">
+      <div className="block bg-[#1e2236] text-white pt-28 pb-6 lg:pb-14">
         <div className="container mx-auto">
           <div className="relative text-center mx-auto mb-20">
-            <div className="flex flex-wrap justify-center mx-10 lg:mx-52">
-              <p className="text-primary font-light text-lg uppercase tracking-[3px] mb-[10px] leading-[1.2] font-teko visible animate-fadeInDown delay-300">
-                Резултати евалуације
-              </p>
-              <p className="font-playfair text-[15px] leading-[2] visible animate-flipInX delay-500">
-                Неки од коментара учесника
-                укључених у
-                процес реализације тестирања након евалуације пројекта. Сврха евалуације је унапређење
-                ефикасности и безбедности процеса тестирања кандидата.
-              </p>
+            <div className="flex flex-wrap justify-center">
+              <div className="mx-10 lg:mx-52">
+                <p className="text-primary font-light text-lg uppercase tracking-[3px] mb-[10px] leading-[1.2] font-teko visible animate-fadeInDown delay-300">
+                  Резултати евалуације
+                </p>
+                <p className="font-playfair text-[15px] leading-[2] visible animate-flipInX delay-500 mb-20">
+                  Неки од коментара учесника
+                  укључених у
+                  процес реализације тестирања након евалуације пројекта. Сврха евалуације је унапређење
+                  ефикасности и безбедности процеса тестирања кандидата.
+                </p>
+              </div>
+
+              <CommentsSlider />
             </div>
           </div>
 
         </div>
+      </div>
+
+      <div className="block relative py-32">
+        <div className="absolute top-0 left-0 w-full h-[70%] -z-[2] bg-auto bg-repeat shadow-brand" style={{ backgroundImage: `url('${getMediaPathname("dots.png")}')`, height: "50vh" }}>
+        </div>
+
+        {/* <div className="container mx-auto">
+          <div className="grid grid-cols-2">
+            <div className="col-span-1">
+              <p className="text-primary text-[22px] font-normal mb-[10px] font-teko visible animate-fadeInDown delay-300">Нешто о нама</p>
+              <p className="font-bold mb-5 visible delay-500 animate-flipInX text-[35px]">Реализатори пројекта</p>
+              <p className="text-[#888] text-[15px] font-normal leading-[2] visible delay-300 animate-fadeInUp">
+                У наставку су приказани кључни људи заслужни за идејно решење, имплементацију, реализацију
+                и организацију горе поменутих процеса.
+              </p>
+              <div className="animate-fadeInUp delay-300 visible mt-[30px]">
+                <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer mr-1">
+                  <FontAwesomeIcon icon={faLongArrowAltLeft} size="xs" />
+                </span>
+                <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer">
+                  <FontAwesomeIcon icon={faLongArrowAltRight} size="xs" />
+                </span>
+              </div>
+            </div>
+
+            <div className="col-span-1">
+              <div className="relative mx-auto">
+                <TeammatesSlider />
+              </div>
+            </div>
+          </div>
+        </div> */}
       </div>
     </>
   );

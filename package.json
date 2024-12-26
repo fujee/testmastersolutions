@@ -18,6 +18,8 @@
     "@react-pdf-viewer/core": "^3.12.0",
     "@react-pdf-viewer/page-navigation": "^3.12.0",
     "canvas": "^2.11.2",
+    "embla-carousel-autoplay": "^8.5.1",
+    "embla-carousel-react": "^8.5.1",
     "next": "15.1.0",
     "pdfjs-dist": "^3.4.120",
     "react": "^19.0.0",
