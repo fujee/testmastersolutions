@@ -1,5 +1,6 @@
 import { getMediaPathname } from "@/common/pathHelper";
-import { faLongArrowAltLeft, faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe, faLongArrowAltLeft, faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Autoplay from "embla-carousel-autoplay";
 import useEmblaCarousel from "embla-carousel-react";
@@ -28,77 +29,134 @@ export default function TeammatesSlider() {
     const sliderData = [
         {
             id: 1,
-            title: `"Било ми је задовољство радити са овим људима уз перфектну организацију."`,
+            name: `др Марко Петровић`,
+            title: 'руководилац пројекта',
+            img: 'team/marko.petrovic.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/marko-petrovic/',
+            linkedin: 'https://www.linkedin.com/in/marko-petrovic-15832830'
         },
         {
             id: 2,
-            title: `"Све похвале за све установе и све људе који су били укључени у читав процес Завршног испита. Перфектно реализован пројекат."`,
+            name: `др Милош Јевтић`,
+            img: 'team/milos.jevtic.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/milos-jevtic/',
+            linkedin: 'https://www.linkedin.com/in/milo%C5%A1-jevti%C4%87-2663a343/'
         },
         {
             id: 3,
-            title: `"Чиста десетка за сарадњу са тимом. Реч у решавању проблема, поред опреме и софтвера, има огроман удео. Свака част."`,
+            name: `др Нина Турајлић`,
+            img: 'team/nina.turajlic.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/nina-turajlic/',
         },
         {
             id: 4,
-            title: `"Честитке за успешно обављен посао и хвала свима на изузетној сарадњи."`,
+            name: `др Ненад Аничић`,
+            img: 'team/nenad.anicic.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/nenad-anicic/',
         },
         {
             id: 5,
-            title: `"Све одлично функционише. Софтвер више него практичан."`,
+            name: `Филип Фуртула`,
+            img: 'team/filip.furtula.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/filip-furtula/',
+            linkedin: 'https://www.linkedin.com/in/filip-furtula/'
         },
         {
             id: 6,
-            title: `"Све похвале за комплетну припрему, организацију и реализацију планираних активности."`,
+            name: `Милош Љубисављевић`,
+            img: 'team/milos.ljubisavljevic.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/milos-ljubisavljevic/',
+            linkedin: 'https://www.linkedin.com/in/ljuba95/'
         },
         {
             id: 7,
-            title: `"Било је задовољство радити са вама."`
-        }
+            name: `Ђорђе Несторовић`,
+            img: 'team/djordje.nestorovic.png',
+            linkedin: 'https://www.linkedin.com/in/djordje-nestorovic-3b3543119/'
+        },
+        {
+            id: 8,
+            name: `Владимир Белча`,
+            img: 'team/vladimir.belca.png',
+            site: 'https://fon.bg.ac.rs/nastavnici/vladimir-belca/',
+            linkedin: 'https://www.linkedin.com/in/vladimir-belca/'
+        },
+        {
+            id: 9,
+            name: `Александра Фуртула`,
+            img: 'team/aleksandra.furtula.png',
+            linkedin: 'https://www.linkedin.com/in/aleksandra-furtula-41a666181/'
+        },
+        {
+            id: 10,
+            name: `Исидора Видојевић`,
+            img: 'team/isidora.vidojevic.png',
+            linkedin: 'https://www.linkedin.com/in/isidora-vidojević-6ab4891a2/'
+        },
     ];
 
     return (
         <>
-            <div className="overflow-hidden w-full mx-3 lg:mx-20 pt-4 relative" ref={emblaRef}>
-                <div className="flex">
-                    {sliderData.map((item) => (
-                        <div
-                            className="flex-shrink-0 basis-full lg:basis-1/2 px-5 relative"
-                            key={item.id}
-                        >
-                            <span className="absolute -top-3 lg:-top-5 right-[16%] lg:right-[14%] w-[9%] z-30">
-                                <Image
-                                    className="block w-full h-auto align-middle"
-                                    src={getMediaPathname("clients/quote.svg")}
-                                    alt="Quote"
-                                    width={40}
-                                    height={40}
-                                />
-                            </span>
-
-                            <div className="px-10 pt-[50px] pb-10 border-[10px] border-t-0 border-[#f7f7f7] shadow-lg h-full flex items-center justify-center relative after:content-[''] after:absolute after:top-0 after:h-[10px] after:w-3/4 after:left-0 after:bg-[#f7f7f7] before:content-[''] before:absolute before:top-0 before:h-[10px] before:w-[5%] before:right-0 before:bg-[#f7f7f7] box-border">
-                                <p className="text-center text-lg font-normal italic text-white font-playfair">
-                                    {item.title}
-                                </p>
-                            </div>
-                        </div>
-                    ))}
+            <div className="lg:col-span-2 mx-4 lg:ml-16">
+                <p className="text-primary text-[22px] font-normal mb-[10px] font-teko visible animate-fadeInDown delay-300">Нешто о нама</p>
+                <p className="font-bold mb-5 visible delay-500 animate-flipInX text-[24px] lg:text-[35px]">Реализатори пројекта</p>
+                <p className="text-[#888] text-[15px] font-normal leading-[2] visible delay-300 animate-fadeInUp">
+                    У наставку су приказани кључни људи заслужни за идејно решење, имплементацију, реализацију
+                    и организацију горе поменутих процеса.
+                </p>
+                <div className="animate-fadeInUp delay-300 visible mt-[30px]">
+                    <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer mr-1" onClick={scrollPrev}>
+                        <FontAwesomeIcon icon={faLongArrowAltLeft} size="xs" />
+                    </span>
+                    <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer" onClick={scrollNext}>
+                        <FontAwesomeIcon icon={faLongArrowAltRight} size="xs" />
+                    </span>
                 </div>
-
-                <span
-                    className="bg-[#bcab8a] py-[10px] px-5 cursor-pointer absolute top-1/2 left-0 transform -translate-y-1/2 z-40"
-                    onClick={scrollPrev}
-                >
-                    <FontAwesomeIcon icon={faLongArrowAltLeft} />
-                </span>
-
-                <span
-                    className="bg-[#bcab8a] py-[10px] px-5 cursor-pointer absolute top-1/2 right-0 transform -translate-y-1/2 z-40"
-                    onClick={scrollNext}
-                >
-                    <FontAwesomeIcon icon={faLongArrowAltRight} />
-                </span>
             </div>
 
+            <div className="lg:col-span-3">
+                <div className="relative mx-auto after:lg:absolute after:lg:-top-[100px] after:lg:-bottom-[100px] after:lg:right-20 after:lg:w-[60%] after:lg:bg-[#f8f4f3] after:lg:-z-10">
+                    <div className="overflow-hidden max-w-full mx-3 lg:mx-20 pt-1 relative" ref={emblaRef}>
+                        <div className="flex">
+                            {sliderData.map((item) => (
+                                <div
+                                    className="flex-shrink-0 basis-full lg:basis-1/2 px-1 relative"
+                                    key={item.id}
+                                >
+                                    <div className="flex flex-col overflow-hidden group">
+                                        <Image
+                                            className="object-cover w-[85%] lg:w-[90%] h-[350px] border border-primary rounded-[35px] align-middle shadow-indexTeammate duration-700 group-hover:brightness-[.65]"
+                                            src={getMediaPathname(item.img)}
+                                            alt=""
+                                            width={0}
+                                            height={0}
+                                        />
+                                        <div className="absolute top-4 left-2 bg-white p-3 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
+                                            {item.site && (
+                                                <a className={`block text-primary text-[16px] ${item.linkedin ? "mb-2" : ""}`} href={item.site} target="_blank">
+                                                    <FontAwesomeIcon icon={faGlobe} />
+                                                </a>
+                                            )}
+                                            {item.linkedin && (
+                                                <a className="block text-primary text-[16px]" href={item.linkedin} target="_blank">
+                                                    <FontAwesomeIcon icon={faLinkedin} />
+                                                </a>
+                                            )}
+                                        </div>
+
+
+                                        <div className="mt-5 lg:text-center">
+                                            {/* <p className="max-lg:px-14 text-[18px] mb-[2px] leading-[1.4] font-semibold">{item.name}</p> */}
+
+                                            {item.title && <span className="text-[14px] text-primary">{item.title}</span>}
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
         </>
     );
 }

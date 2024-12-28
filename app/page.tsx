@@ -2,6 +2,7 @@
 
 import { getMediaPathname } from "@/common/pathHelper";
 import CommentsSlider from "@/components/CommentsSlider";
+import TeammatesSlider from "@/components/TeammatesSlider";
 import { faBell, faGraduationCap, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
@@ -496,36 +497,15 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block relative py-32">
-        <div className="absolute top-0 left-0 w-full h-[70%] -z-[2] bg-auto bg-repeat shadow-brand" style={{ backgroundImage: `url('${getMediaPathname("dots.png")}')`, height: "50vh" }}>
+      <div className="block relative py-16 lg:py-24">
+        <div className="absolute top-0 left-0 w-full h-full -z-[20] bg-auto bg-repeat shadow-brand" style={{ backgroundImage: `url('${getMediaPathname("dots.png")}')` }}>
         </div>
 
-        {/* <div className="container mx-auto">
-          <div className="grid grid-cols-2">
-            <div className="col-span-1">
-              <p className="text-primary text-[22px] font-normal mb-[10px] font-teko visible animate-fadeInDown delay-300">Нешто о нама</p>
-              <p className="font-bold mb-5 visible delay-500 animate-flipInX text-[35px]">Реализатори пројекта</p>
-              <p className="text-[#888] text-[15px] font-normal leading-[2] visible delay-300 animate-fadeInUp">
-                У наставку су приказани кључни људи заслужни за идејно решење, имплементацију, реализацију
-                и организацију горе поменутих процеса.
-              </p>
-              <div className="animate-fadeInUp delay-300 visible mt-[30px]">
-                <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer mr-1">
-                  <FontAwesomeIcon icon={faLongArrowAltLeft} size="xs" />
-                </span>
-                <span className="py-[15px] px-[30px] bg-[#f8f4f3] cursor-pointer">
-                  <FontAwesomeIcon icon={faLongArrowAltRight} size="xs" />
-                </span>
-              </div>
-            </div>
-
-            <div className="col-span-1">
-              <div className="relative mx-auto">
-                <TeammatesSlider />
-              </div>
-            </div>
+        <div className="container mx-auto">
+          <div className="grid lg:grid-cols-5 gap-10 ">
+            <TeammatesSlider />
           </div>
-        </div> */}
+        </div>
       </div>
     </>
   );

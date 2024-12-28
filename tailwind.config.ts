@@ -21,7 +21,8 @@ export default {
         resultItem: '0px 5px 10px rgba(37, 37, 49, 0.1)',
         resultGroupItem: '0px 0px 1px #a68968a6',
         teammate: '0px -2px 9px 0px #00000042',
-        brand: '0 0 45px rgba(10, 10, 10, 0.06)'
+        brand: '0 0 45px rgba(10, 10, 10, 0.06)',
+        indexTeammate: '0 28px 16px -26px rgba(0, 0, 0)'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
