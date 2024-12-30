@@ -123,15 +123,15 @@ export default function TeammatesSlider() {
                                     className="flex-shrink-0 basis-full lg:basis-1/2 px-1 relative"
                                     key={item.id}
                                 >
-                                    <div className="flex flex-col overflow-hidden group">
+                                    <div className="flex justify-center items-center lg:flex-col overflow-hidden group">
                                         <Image
-                                            className="object-cover w-[85%] lg:w-[90%] h-[350px] border border-primary rounded-[35px] align-middle shadow-indexTeammate duration-700 group-hover:brightness-[.65]"
+                                            className="object-cover mx-auto w-[85%] lg:w-[90%] h-[350px] border border-primary rounded-[35px] align-middle shadow-indexTeammate duration-700 group-hover:brightness-[.65]"
                                             src={getMediaPathname(item.img)}
-                                            alt=""
-                                            width={0}
-                                            height={0}
+                                            alt={item.name}
+                                            width={350}
+                                            height={450}
                                         />
-                                        <div className="absolute top-4 left-2 bg-white p-3 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
+                                        <div className="absolute top-4 left-8 lg:left-5 bg-white p-3 rounded-lg shadow-lg z-10 opacity-0 group-hover:opacity-100 group-hover:translate-x-2 transition-all duration-300">
                                             {item.site && (
                                                 <a className={`block text-primary text-[16px] ${item.linkedin ? "mb-2" : ""}`} href={item.site} target="_blank">
                                                     <FontAwesomeIcon icon={faGlobe} />
@@ -144,12 +144,11 @@ export default function TeammatesSlider() {
                                             )}
                                         </div>
 
+                                    </div>
 
-                                        <div className="mt-5 lg:text-center">
-                                            {/* <p className="max-lg:px-14 text-[18px] mb-[2px] leading-[1.4] font-semibold">{item.name}</p> */}
-
-                                            {item.title && <span className="text-[14px] text-primary">{item.title}</span>}
-                                        </div>
+                                    <div className="mt-5 text-center">
+                                        <p className="break-words break-all whitespace-normal max-w-full overflow-auto text-[18px] mb-[2px] leading-[1.4] font-semibold">{item.name}</p>
+                                        {item.title && <span className="text-[14px] text-primary">{item.title}</span>}
                                     </div>
                                 </div>
                             ))}
