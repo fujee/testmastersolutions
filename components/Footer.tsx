@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <div className="bg-[#1e2236] pt-10 lg:pt-20 min-w-fit">
+        <div className="bg-[#1e2236] pt-10 lg:pt-20 min-w-fit" id="partners">
             <div className="container mx-auto lg:pb-10">
                 <div className="grid grid-rows-[auto] lg:grid-rows-1 lg:grid-flow-col gap-3 lg:mx-56 gap-x-20">
                     <div className="lg:col-span-1 justify-items-center">

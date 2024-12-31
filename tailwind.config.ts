@@ -11,6 +11,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        navBtn: "rgba(255, 255, 255, 0.3)",
         primary: '#a68968',
         secondary: '#1e2236',
         navBg: '#111',
@@ -22,7 +23,8 @@ export default {
         resultGroupItem: '0px 0px 1px #a68968a6',
         teammate: '0px -2px 9px 0px #00000042',
         brand: '0 0 45px rgba(10, 10, 10, 0.06)',
-        indexTeammate: '0 28px 16px -26px rgba(0, 0, 0)'
+        indexTeammate: '0 28px 16px -26px rgba(0, 0, 0)',
+        sliderNum: '1px 0 white, -1px 0 white, 0 1px white, 0 -1px white'
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

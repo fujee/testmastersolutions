@@ -2,6 +2,7 @@
 
 import { getMediaPathname } from "@/common/pathHelper";
 import CommentsSlider from "@/components/CommentsSlider";
+import HeaderSlider from "@/components/HeaderSlider";
 import TeammatesSlider from "@/components/TeammatesSlider";
 import { faBell, faGraduationCap, faUniversity } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,7 +14,11 @@ export default function Home() {
 
   return (
     <>
-      <div className="block relative pt-28 pb-56 lg:py-28 mb-5">
+      <header className="relative">
+        <HeaderSlider />
+      </header>
+
+      <div className="block relative pt-8 pb-56 lg:py-28 mb-5" id="software">
         <div className="container max-w-screen-xl mx-auto">
           <div className="grid lg:grid-cols-2">
 
@@ -85,7 +90,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block pt-64 pb-64 lg:py-32 bg-[#f8f4f3]">
+      <div className="block pt-64 pb-64 lg:py-32 bg-[#f8f4f3]" id="phases">
         <div className="container mx-auto max-w-screen-lg">
           <div className="visible animate-fadeInUp">
             <p className="mb-10 text-3xl lg:text-[40px] font-playfair text-center leading-[1.4] font-semibold">
@@ -344,7 +349,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block py-14 lg:py-28">
+      <div className="block py-14 lg:py-28" id="results">
         <div className="container mx-auto font-playfair mb-16">
           <p className="text-center text-3xl lg:text-[40px] font-semibold mx-20">
             Најбољи <span className="text-primary">резултати</span>

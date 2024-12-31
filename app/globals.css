@@ -24,3 +24,8 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.sliderNum {
+  -webkit-text-stroke: 0.5px #fff;
+  color: transparent;
+}
