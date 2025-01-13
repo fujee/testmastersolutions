@@ -7,9 +7,13 @@ import Link from "next/link";
 import { Disclosure, DisclosureButton, DisclosurePanel } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
+import LanguageChanger from "./LanguageChanger";
+import { useLang } from "@/contexts/langContext";
 
 export default function Navbar() {
     const [color, setColor] = useState<boolean>(false);
+
+    const { t } = useLang();
 
     const changeColor = () => {
         if (window.scrollY >= 90) {
@@ -42,18 +46,20 @@ export default function Navbar() {
                     </Link>
                     <div className="hidden lg:flex items-center gap-5 text-sm font-semibold">
                         <Link href="/" className={`${color ? "text-[#191514]" : "text-white"} hover:text-primary transition-colors duration-100`}>
-                            Почетна
+                            {t("Почетна", "nav_home")}
                         </Link>
                         <Link href="/about" className={`${color ? "text-[#191514]" : "text-white"} hover:text-primary transition-colors duration-100`}>
-                            О нама
+                            {t("О нама", "nav_about")}
                         </Link>
                         <Link href="/results" className={`${color ? "text-[#191514]" : "text-white"} hover:text-primary transition-colors duration-100`}>
-                            Резултати
+                            {t("Резултати", "nav_results")}
                         </Link>
                         <Link href="/contact" className={`${color ? "text-[#191514]" : "text-white"} hover:text-primary transition-colors duration-100 lg:border-r-2 ${color ? "border-black/30" : "border-white/30"} lg:pe-3`}>
-                            Контакт
+                            {t("Контакт", "nav_contact")}
                         </Link>
+                        <LanguageChanger className="hidden ms-auto lg:block" changeTextColor={color} />
                     </div>
+
                     <div className="absolute right-2 inset-y-5 lg:hidden">
                         <DisclosureButton className="ms-auto group inline-flex items-center justify-center rounded-md p-2">
                             <span className="sr-only">Open main menu</span>
@@ -67,19 +73,20 @@ export default function Navbar() {
 
             <DisclosurePanel className='lg:hidden bg-navBg absolute w-full rounded-b-xl text-sm font-semibold'>
                 {({ close }: { close: () => void }) => (
-                    <div className="flex items-center gap-4 flex-col">
-                        <Link href="/" onClick={close} className="text-white hover:text-primary transition-colors duration-100 mt-3">
+                    <div className="flex items-start gap-4 flex-col">
+                        <Link href="/" onClick={close} className="text-white hover:text-primary transition-colors duration-100 mt-3 pl-3.5">
                             Почетна
                         </Link>
-                        <Link href="/about" onClick={close} className="text-white hover:text-primary transition-colors duration-100">
+                        <Link href="/about" onClick={close} className="text-white hover:text-primary transition-colors duration-100 pl-3.5">
                             О нама
                         </Link>
-                        <Link href="/results" onClick={close} className="text-white hover:text-primary transition-colors duration-100">
+                        <Link href="/results" onClick={close} className="text-white hover:text-primary transition-colors duration-100 pl-3.5">
                             Резултати
                         </Link>
-                        <Link href="/contact" onClick={close} className="text-white hover:text-primary transition-colors duration-100 mb-3 lg:border-r-2 border-white/30">
+                        <Link href="/contact" onClick={close} className="text-white hover:text-primary transition-colors duration-100 lg:border-r-2 border-white/30 pl-3.5">
                             Контакт
                         </Link>
+                        <LanguageChanger callback={close} className="text-white hover:text-primary transition-colors duration-100 mb-3 w-full" />
                     </div>
                 )}
 

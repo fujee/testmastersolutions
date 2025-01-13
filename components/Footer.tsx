@@ -1,9 +1,14 @@
+'use client'
+
 import { getMediaPathname } from "@/common/pathHelper";
+import { useLang } from "@/contexts/langContext";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Footer() {
+    const { t } = useLang();
+
     return (
         <div className="bg-[#1e2236] pt-10 lg:pt-20 min-w-fit" id="partners">
             <div className="container mx-auto lg:pb-10">
@@ -16,7 +21,7 @@ export default function Footer() {
                             width={220}
                             height={40}
                         />
-                        <p className="text-xs lg:text-sm text-[#888] my-2 text-center">Наш тим покрива све – од идеје до реализације</p>
+                        <p className="text-xs lg:text-sm text-[#888] my-2 text-center">{t("Наш тим покрива све – од идеје до реализације", "footer_team")}</p>
                         <a href="http://www.fon.bg.ac.rs/" target="_blank">
                             <Image
                                 className="p-3"
@@ -26,8 +31,8 @@ export default function Footer() {
                                 height={20}
                             />
                         </a>
-                        <p className="text-xs lg:text-sm text-[#888] text-center leading-relaxed">Подржано од стране <br />
-                            <a href="http://www.fon.bg.ac.rs/" target="_blank" className="hover:text-primary transition-colors duration-100 text-center">Факултета организационих наука</a>
+                        <p className="text-xs lg:text-sm text-[#888] text-center leading-relaxed">{t("Подржано од стране", "footer_supported")} <br />
+                            <a href="http://www.fon.bg.ac.rs/" target="_blank" className="hover:text-primary transition-colors duration-100 text-center">{t("Факултета организационих наука", "footer_fon")}</a>
                         </p>
                     </div>
                     <div className="mt-6 ml-4 lg:ml-0 lg:mt-0 lg:col-span-1 text-xs lg:text-sm">
@@ -35,25 +40,25 @@ export default function Footer() {
                         <ul className="grid gap-y-4 lg:gap-y-2">
                             <li className="flex items-center">
                                 <FontAwesomeIcon icon={faChevronRight} aria-hidden="true" className={`text-[#a68968] text-xs`} />
-                                <a target="_blank" href="https://www.srbija.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">Влада републике Србије</a>
+                                <a target="_blank" href="https://www.srbija.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">{t("Влада републике Србије", "footer_government")}</a>
                             </li>
                             <li className="flex items-center">
                                 <FontAwesomeIcon icon={faChevronRight} aria-hidden="true" className={`text-[#a68968] text-xs`} />
-                                <a target="_blank" href="https://www.mpn.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">Министарство просвете</a>
+                                <a target="_blank" href="https://www.mpn.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">{t("Министарство просвете", "footer_ministry")}</a>
                             </li>
                             <li className="flex items-center">
                                 <FontAwesomeIcon icon={faChevronRight} aria-hidden="true" className={`text-[#a68968] text-xs`} />
-                                <a target="_blank" href="https://www.ite.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">Канцеларија за информационе технологије и електронску управу</a>
+                                <a target="_blank" href="https://www.ite.gov.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">{t("Канцеларија за информационе технологије и електронску управу", "footer_euprava")}</a>
                             </li>
                             <li className="flex items-center">
                                 <FontAwesomeIcon icon={faChevronRight} aria-hidden="true" className={`text-[#a68968] text-xs`} />
-                                <a target="_blank" href="https://ceo.edu.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">Завод за вредновање квалитета образовања и васпитања</a>
+                                <a target="_blank" href="https://ceo.edu.rs/" className="text-white hover:text-primary transition-colors duration-100 ml-2">{t("Завод за вредновање квалитета образовања и васпитања", "footer_zavod")}</a>
                             </li>
                         </ul>
                     </div>
                     <div className="mx-4 lg:mx-0 mt-8 lg:mt-0 mb-10 lg:mb-0 lg:col-span-1">
                         <div className="block border-b border-b-white/10 mb-6">
-                            <h6 className="text-[#a68968] font-semibold uppercase tracking-widest text-xs mb-2">Електронска пошта</h6>
+                            <h6 className="text-[#a68968] font-semibold uppercase tracking-widest text-xs mb-2">{t("Електронска пошта", "footer_email")}</h6>
                         </div>
                         <p className="text-[#888] hover:text-primary transition-colors duration-100 text-sm"><a href="mailto:contact@testmastersolutions.com">contact@testmastersolutions.com</a></p>
                     </div>
@@ -66,7 +71,7 @@ export default function Footer() {
                             <p>© 2022, TESTMASTER SOLUTIONS</p>
                         </div>
                         <div className="lg:text-right text-xs text-[#888]">
-                            <p>Сва права задржана.</p>
+                            <p>{t("Сва права задржана.", "footer_rights")}</p>
                         </div>
                     </div>
                 </div>

@@ -1,18 +1,21 @@
 'use client'
 
 import { getMediaPathname } from "@/common/pathHelper";
+import { useLang } from "@/contexts/langContext";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faIdCard, faMap } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Contact() {
+    const { t } = useLang();
+
     return (
         <>
             <div className="relative overflow-hidden bg-cover bg-no-repeat" style={{ backgroundImage: `url('${getMediaPathname("contact.png")}')`, height: "50vh" }}>
                 <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed" style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}>
                     <div className="flex h-full items-center justify-center">
                         <div className="text-white">
-                            <p className="mb-4 text-4xl lg:text-7xl font-bold">Како до нас?</p>
+                            <p className="mb-4 text-4xl lg:text-7xl font-bold">{t("Како до нас?", "contact_title")}</p>
                         </div>
                     </div>
                 </div>
@@ -27,7 +30,7 @@ export default function Contact() {
                                         <FontAwesomeIcon icon={faEnvelope} />
                                     </div>
                                     <div className="text-center">
-                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">Електронска пошта</h6>
+                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">{t("Електронска пошта", "contact_email")}</h6>
                                         <a href="mailto:contact@testmastersolutions.com" className={`font-poppins cursor-pointer underline ease-in-out hover:text-primary transition-colors duration-100`}>contact@testmastersolutions.com</a>
                                     </div>
                                 </div>
@@ -49,7 +52,7 @@ export default function Contact() {
                                         <FontAwesomeIcon icon={faIdCard} />
                                     </div>
                                     <div className="text-center">
-                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">Матични број</h6>
+                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">{t("Матични број", "contact_companyNumber")}</h6>
                                         <p className="text-[#888] text-sm leading-6 font-poppins">21850802</p>
                                     </div>
                                 </div>
@@ -60,7 +63,7 @@ export default function Contact() {
                                         <FontAwesomeIcon icon={faMap} />
                                     </div>
                                     <div className="text-center">
-                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">ПИБ</h6>
+                                        <h6 className="text-[#1e2236] font-bold lg:text-lg mb-1">{t("ПИБ", "contact_vatNumber")}</h6>
                                         <p className="text-[#888] text-sm leading-6 font-poppins">113350682</p>
                                     </div>
                                 </div>

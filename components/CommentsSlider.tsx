@@ -1,4 +1,7 @@
+'use client'
+
 import { getMediaPathname } from "@/common/pathHelper";
+import { useLang } from "@/contexts/langContext";
 import { faLongArrowAltLeft, faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Autoplay from "embla-carousel-autoplay";
@@ -7,6 +10,8 @@ import Image from "next/image";
 import { useCallback } from "react";
 
 export default function CommentsSlider() {
+    const { t } = useLang();
+
     const [emblaRef, emblaApi] = useEmblaCarousel(
         { loop: true, align: "start" },
         [
@@ -28,31 +33,31 @@ export default function CommentsSlider() {
     const sliderData = [
         {
             id: 1,
-            title: `"Било ми је задовољство радити са овим људима уз перфектну организацију."`,
+            title: t(`"Било ми је задовољство радити са овим људима уз перфектну организацију."`, "home_eval_comm_1"),
         },
         {
             id: 2,
-            title: `"Све похвале за све установе и све људе који су били укључени у читав процес Завршног испита. Перфектно реализован пројекат."`,
+            title: t(`"Све похвале за све установе и све људе који су били укључени у читав процес Завршног испита. Перфектно реализован пројекат."`, "home_eval_comm_2"),
         },
         {
             id: 3,
-            title: `"Чиста десетка за сарадњу са тимом. Реч у решавању проблема, поред опреме и софтвера, има огроман удео. Свака част."`,
+            title: t(`"Чиста десетка за сарадњу са тимом. Реч у решавању проблема, поред опреме и софтвера, има огроман удео. Свака част."`, "home_eval_comm_3"),
         },
         {
             id: 4,
-            title: `"Честитке за успешно обављен посао и хвала свима на изузетној сарадњи."`,
+            title: t(`"Честитке за успешно обављен посао и хвала свима на изузетној сарадњи."`, "home_eval_comm_4"),
         },
         {
             id: 5,
-            title: `"Све одлично функционише. Софтвер више него практичан."`,
+            title: t(`"Све одлично функционише. Софтвер више него практичан."`, "home_eval_comm_5")
         },
         {
             id: 6,
-            title: `"Све похвале за комплетну припрему, организацију и реализацију планираних активности."`,
+            title: t(`"Све похвале за комплетну припрему, организацију и реализацију планираних активности."`, "home_eval_comm_6")
         },
         {
             id: 7,
-            title: `"Било је задовољство радити са вама."`
+            title: t(`"Било је задовољство радити са вама."`, "home_eval_comm_7")
         }
     ];
 
