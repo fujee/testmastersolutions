@@ -75,16 +75,16 @@ export default function Navbar() {
                 {({ close }: { close: () => void }) => (
                     <div className="flex items-start gap-4 flex-col">
                         <Link href="/" onClick={close} className="text-white hover:text-primary transition-colors duration-100 mt-3 pl-3.5">
-                            Почетна
+                            {t("Почетна", "nav_home")}
                         </Link>
                         <Link href="/about" onClick={close} className="text-white hover:text-primary transition-colors duration-100 pl-3.5">
-                            О нама
+                            {t("О нама", "nav_about")}
                         </Link>
                         <Link href="/results" onClick={close} className="text-white hover:text-primary transition-colors duration-100 pl-3.5">
-                            Резултати
+                            {t("Резултати", "nav_results")}
                         </Link>
                         <Link href="/contact" onClick={close} className="text-white hover:text-primary transition-colors duration-100 lg:border-r-2 border-white/30 pl-3.5">
-                            Контакт
+                            {t("Контакт", "nav_contact")}
                         </Link>
                         <LanguageChanger callback={close} className="text-white hover:text-primary transition-colors duration-100 mb-3 w-full" />
                     </div>
