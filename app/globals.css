@@ -29,3 +29,20 @@ body {
   -webkit-text-stroke: 0.5px #fff;
   color: transparent;
 }
+
+@keyframes borderAnimation {
+  0% {
+    width: 0%;
+    opacity: 1;
+    border-color: transparent;
+  }
+  100% {
+    width: 100%;
+    opacity: 0;
+    border-color: #a68968;
+  }
+}
+
+.animate-border {
+  animation: borderAnimation 0.5s cubic-bezier(0.42, 0, 0.58, 1) forwards;
+}

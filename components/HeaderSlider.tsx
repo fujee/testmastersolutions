@@ -103,7 +103,7 @@ export default function HeaderSlider() {
                                     <div className="container mx-auto top-[25%] lg:top-[25%] relative z-20 flex ">
                                         <div className="lg:grid lg:grid-cols-3 items-center justify-center">
                                             <div className="lg:col-span-2 ml-4 lg:ml-44 flex flex-col justify-center items-start">
-                                                <p className={`text-primary text-[25px] ${getLang(lang) === "sr-Cyrl-RS" ? "lg:text-[30px]" : "lg:text-[50px]"} font-light uppercase tracking-[8px] mb-[5px] font-teko leading-[1.4] transition-all duration-300 delay-700`}>
+                                                <p className={`text-primary text-[25px] ${getLang(lang) === "sr-Cyrl-RS" ? "lg:text-[30px]" : "lg:text-[40px]"} font-light uppercase tracking-[8px] mb-[5px] font-teko leading-[1.4] transition-all duration-300 delay-700`}>
                                                     {item.title}
                                                 </p>
                                                 <p className="text-[35px] lg:text-[65px] font-bold tracking-[4px] text-white leading-[1.4]">
