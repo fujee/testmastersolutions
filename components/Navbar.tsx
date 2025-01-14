@@ -32,7 +32,7 @@ export default function Navbar() {
     }, [])
 
     return (
-        <Disclosure as='nav' className={`fixed z-50 w-full border-b transition duration-300 ease-in-out border-b-white/10 ${color ? "bg-[#fff] shadow-xl" : "bg-navBg lg:bg-transparent"}`}>
+        <Disclosure as='nav' className={`fixed z-50 w-full border-b transition duration-300 ease-in-out border-b-white/10 ${color ? "bg-[#fff] shadow-xl" : "bg-transparent"}`}>
             <div className="container mx-auto">
                 <div className="flex align-middle justify-between px-4 lg:mx-48">
                     <Link href="/">
@@ -71,7 +71,7 @@ export default function Navbar() {
             </div>
 
 
-            <DisclosurePanel className='lg:hidden bg-navBg absolute w-full rounded-b-xl text-sm font-semibold'>
+            <DisclosurePanel className='lg:hidden bg-navBg absolute w-full rounded-b-xl text-sm font-semibold shadow-2xl'>
                 {({ close }: { close: () => void }) => (
                     <div className="flex items-start gap-4 flex-col">
                         <Link href="/" onClick={close} className="text-white hover:text-primary transition-colors duration-100 mt-3 pl-3.5">
