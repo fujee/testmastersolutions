@@ -189,7 +189,7 @@ export default function Results() {
                     </div>
                 </div>
                 <div className="flex flex-col items-center gap-0">
-                    <Worker workerUrl="https://unpkg.com/pdfjs-dist@3.4.120/build/pdf.worker.min.js">
+                    <Worker workerUrl={getMediaPathname("js/pdf.worker.min.js")}>
                         <div className="border-2 border-primary w-[300px] h-[300px] lg:w-[744px] lg:h-[744px] flex justify-center items-center">
                             <Viewer
                                 plugins={[disableScrollPluginInstance, jumpToPagePluginInstance]}
