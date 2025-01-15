@@ -94,7 +94,7 @@ export default function HeaderSlider() {
                                 key={item.id}
                             >
                                 <div
-                                    className="relative overflow-hidden bg-cover bg-repeat-round h-screen"
+                                    className="relative overflow-hidden max-lg:bg-center bg-cover lg:bg-repeat-round h-screen"
                                     style={{
                                         backgroundImage: `url('${getMediaPathname(item.img)}')`
                                     }}
