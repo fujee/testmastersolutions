@@ -13,18 +13,20 @@ export default function Footer() {
         <div className="bg-[#1e2236] pt-10 lg:pt-20 min-w-fit" id="partners">
             <div className="container mx-auto lg:pb-10">
                 <div className="grid grid-rows-[auto] lg:grid-rows-1 lg:grid-flow-col gap-3 lg:mx-56 gap-x-20">
-                    <div className="lg:col-span-1 justify-items-center">
-                        <Image
-                            className="p-3"
-                            src={getMediaPathname("logo-light.png")}
-                            alt="Testmaster Solutions"
-                            width={220}
-                            height={40}
-                        />
+                    <div className="lg:col-span-1">
+                        <div className="flex justify-center items-center">
+                            <Image
+                                className="p-3"
+                                src={getMediaPathname("logo-light.png")}
+                                alt="Testmaster Solutions"
+                                width={220}
+                                height={40}
+                            />
+                        </div>
                         <p className="text-xs lg:text-sm text-[#888] my-2 text-center">{t("Наш тим покрива све – од идеје до реализације", "footer_team")}</p>
                     </div>
                     <div className="mt-6 ml-4 lg:ml-0 lg:mt-0 lg:col-span-1 text-xs lg:text-sm">
-                        <h6 className="text-[#a68968] font-semibold uppercase tracking-widest text-xs mb-6">Партнери</h6>
+                        <h6 className="text-[#a68968] font-semibold uppercase tracking-widest text-xs mb-6">{t("Партнери", "footer_partners")}</h6>
                         <ul className="grid gap-y-4 lg:gap-y-2">
                             <li className="flex items-center">
                                 <FontAwesomeIcon icon={faChevronRight} aria-hidden="true" className={`text-[#a68968] text-xs`} />
