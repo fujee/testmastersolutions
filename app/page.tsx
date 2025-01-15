@@ -10,11 +10,42 @@ import { faBell, faGraduationCap, faUniversity } from "@fortawesome/free-solid-s
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 export default function Home() {
   const [activeLink, setActiveLink] = useState<number>(1);
 
   const { t, lang } = useLang();
+
+  const { ref: aboutRef, inView: aboutInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    delay: 1000
+  });
+
+  const { ref: numbersRef, inView: numbersInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    delay: 1200
+  });
+
+  const { ref: featuresRef, inView: featuresInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    delay: 1200
+  });
+
+  const { ref: resultsRef, inView: resultsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    delay: 1200
+  });
+
+  const { ref: commentsRef, inView: commentsInView } = useInView({
+    triggerOnce: true,
+    threshold: 0,
+    delay: 1200
+  });
 
   return (
     <>
@@ -22,12 +53,12 @@ export default function Home() {
         <HeaderSlider />
       </header>
 
-      <div className="block relative pt-8 pb-56 lg:py-28 mb-5" id="software">
+      <div className={`block relative pt-8 pb-56 lg:py-28 mb-5 ${aboutInView ? "" : "opacity-0"}`} id="software">
         <div className="container max-w-screen-xl mx-auto">
           <div className="grid lg:grid-cols-2">
 
             <div className="col-span-1 flex mx-7 my-24 justify-center">
-              <div className="visible animate-fadeInUp">
+              <div className={`${aboutInView ? "visible animate-fadeInUp" : ""}`}>
                 <div className="visible relative z-20 bg-cover bg-no-repeat">
                   <Image
                     className="align-middle after:absolute after:top-10 after:left-10 after:right-10 after:bottom-10 after:-z-10 after:bg-mainLogoBg"
@@ -35,13 +66,14 @@ export default function Home() {
                     alt=""
                     width={400}
                     height={100}
+                    ref={aboutRef}
                   />
                 </div>
               </div>
             </div>
 
             <div className="col-span-1 ml-5 mr-5 lg:ml-0 lg:mr-10 lg:pr-10">
-              <div className="visible animate-fadeInUp relative z-20 after:w-[200px] after:h-[250px] after:absolute after:-top-10 after:right-0 after:lg:-right-10 after:border-[10px] after:border-[#fafafa] after:-z-10 after:box-border">
+              <div className={`${aboutInView ? "visible animate-fadeInUp" : ""} relative z-20 after:w-[200px] after:h-[250px] after:absolute after:-top-10 after:right-0 after:lg:-right-10 after:border-[10px] after:border-[#fafafa] after:-z-10 after:box-border`} ref={aboutRef}>
                 <p className={`text-primary font-teko uppercase font-normal ${getLang(lang) === "sr-Cyrl-RS" ? "text-sm leading-loose" : "text-lg"} pl-16 mb-5 tracking-[4px] before:w-[50px] before:h-[1px] before:bg-primary before:absolute before:left-0 before:top-[16px] before:box-border`}>
                   {t("О нама", "home_testmaster_title")}
                 </p>
@@ -57,26 +89,26 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="relative bg-[#f8f4f3] mx-3 lg:mx-0">
+      <div className={`relative bg-[#f8f4f3] mx-3 lg:mx-0`}>
         <div className="container max-w-[1150px] absolute top-1/2 left-1/2 mt-0 -translate-x-1/2 -translate-y-1/2 py-10 px-8 bg-white rounded-[20px]" style={{ backgroundImage: `url('${getMediaPathname("box-pattern.png")}')` }}>
-          <div className="grid lg:grid-cols-3 gap-x-10">
+          <div className={`grid lg:grid-cols-3 gap-x-10 ${numbersInView ? "" : "opacity-0"}`} ref={numbersRef}>
 
             <div className="col-span-1">
-              <div className="visible animate-tada text-center my-[15px]">
+              <div className={`${numbersInView ? "visible animate-tada" : ""} text-center my-[15px]`}>
                 <span className="text-[3rem] text-[#1e2236] mb-0 leading-[0.8] font-teko">5</span>
                 <p className="text-white mt-[6px] leading-[1.4] text-[15px]">{t("завршних испита на крају основног образовања и васпитања", "home_nums1_title")}</p>
               </div>
             </div>
 
             <div className="col-span-1">
-              <div className="visible animate-tada text-center my-[15px]">
+              <div className={`${numbersInView ? "visible animate-tada" : ""} text-center my-[15px]`}>
                 <span className="text-[3rem] text-[#1e2236] mb-0 leading-[0.8] font-teko">50+</span>
                 <p className="text-white mt-[6px] leading-[1.4] text-[15px]">{t("пријемних испита на основним и мастер студијама", "home_nums2_title")}</p>
               </div>
             </div>
 
             <div className="col-span-1">
-              <div className="visible animate-tada text-center my-[15px]">
+              <div className={`${numbersInView ? "visible animate-tada" : ""} text-center my-[15px]`}>
                 <span className="text-[3rem] text-[#1e2236] mb-0 leading-[0.8] font-teko">200+</span>
                 <p className="text-white mt-[6px] leading-[1.4] text-[15px]">{t("реализованих колоквијума и испита на факултету", "home_nums3_title")}</p>
               </div>
@@ -86,17 +118,17 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block pt-64 pb-64 lg:py-36 bg-[#f8f4f3]" id="phases">
-        <div className="container mx-auto max-w-screen-lg">
-          <div className="visible animate-fadeInUp">
-            <p className="mb-10 text-3xl lg:text-[40px] font-playfair text-center leading-[1.4] font-semibold">
+      <div className={`block pt-64 pb-64 lg:py-36 bg-[#f8f4f3]`} id="phases">
+        <div className={`container mx-auto max-w-screen-lg ${featuresInView ? "" : "opacity-0"}`}>
+          <div className={`${featuresInView ? "visible animate-fadeInUp" : ""}`}>
+            <p className="mb-10 text-3xl lg:text-[40px] font-playfair text-center leading-[1.4] font-semibold" ref={featuresRef}>
               {t("Најзначајније", "home_f_title_1")} <span className="text-primary">{t("функционалности", "home_f_title_2")}</span>
             </p>
           </div>
 
-          <div className="lg:grid lg:grid-cols-3">
+          <div className="lg:grid lg:grid-cols-3" ref={featuresRef}>
             <div className="lg:col-span-1">
-              <div className="visible animate-fadeInUp">
+              <div className={`${featuresInView ? "visible animate-fadeInUp" : ""}`}>
                 <ul className="flex flex-wrap max-lg:mb-7 max-lg:flex-row max-lg:justify-between max-lg:mx-3 max-lg:gap-x-[2px] lg:flex-col">
 
                   <li className="leading-[2.2rem] mb-[10px]">
@@ -248,7 +280,7 @@ export default function Home() {
             </div>
 
             <div className="lg:col-span-2 flex items-center px-10 lg:px-20">
-              <div className="visible animate-fadeInUp relative bg-#f8f4f3 z-0 before:block before:absolute before:-top-[17px] before:-left-[17px] before:w-[60px] before:h-[60px] before:bg-#a68968b0 before:-z-10">
+              <div className={`${featuresInView ? "visible animate-fadeInUp" : ""} relative bg-#f8f4f3 z-0 before:block before:absolute before:-top-[17px] before:-left-[17px] before:w-[60px] before:h-[60px] before:bg-#a68968b0 before:-z-10`}>
 
                 <div className={`transition-all duration-700 ease-in-out ${activeLink === 1 ? 'opacity-100 scale-100' : 'opacity-0 scale-95'}`}>
                   {activeLink === 1 && (
@@ -345,14 +377,14 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block py-14 lg:py-28" id="results">
-        <div className="container mx-auto font-playfair mb-16">
-          <p className="text-center text-3xl lg:text-[40px] font-semibold mx-20">
+      <div className={`block py-14 lg:py-28 ${resultsInView ? "" : "opacity-0"}`} id="results">
+        <div className="container mx-auto font-playfair mb-16" ref={resultsRef}>
+          <p className={`text-center text-3xl lg:text-[40px] font-semibold mx-20 ${resultsInView ? "visible animate-fadeInUp delay-500" : ""}`}>
             {t("Најбољи", "results_bestResults")} <span className="text-primary">{t("резултати", "results_bestResults_2")}</span>
           </p>
         </div>
-        <div className="container mx-auto flex justify-center">
-          <div className="grid lg:grid-cols-3 max-w-screen-lg gap-9 mx-7">
+        <div className="container mx-auto flex justify-center" ref={resultsRef}>
+          <div className={`grid lg:grid-cols-3 max-w-screen-lg gap-9 mx-7 ${resultsInView ? "visible animate-fadeInUp delay-500" : ""}`}>
 
             {/* card start */}
             <div className="col-span-1">
@@ -475,36 +507,27 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="block bg-[#1e2236] text-white pt-28 pb-6 lg:pb-14">
-        <div className="container mx-auto">
+      <div className={`block bg-[#1e2236] text-white pt-28 pb-6 lg:pb-14`}>
+        <div className={`container mx-auto ${commentsInView ? "" : "opacity-0"}`}>
           <div className="relative text-center mx-auto mb-20">
-            <div className="flex flex-wrap justify-center">
+            <div className="flex flex-wrap justify-center" ref={commentsRef}>
               <div className="mx-10 lg:mx-52">
-                <p className={`text-primary font-light ${getLang(lang) === "sr-Cyrl-RS" ? "text-lg " : "text-3xl"} uppercase tracking-[3px] mb-[10px] leading-[1.2] font-teko visible animate-fadeInDown delay-300`}>
+                <p className={`text-primary font-light ${getLang(lang) === "sr-Cyrl-RS" ? "text-lg " : "text-3xl"} uppercase tracking-[3px] mb-[10px] leading-[1.2] font-teko ${commentsInView ? "visible animate-fadeInDown delay-300" : ""} `}>
                   {t("Резултати евалуације", "home_eval_title")}
                 </p>
-                <p className="font-playfair text-[15px] leading-[2] visible animate-flipInX delay-500 mb-20">
+                <p className={`font-playfair text-[15px] leading-[2] ${commentsInView ? "visible animate-flipInX delay-500" : ""}  mb-20`}>
                   {t("Неки од коментара учесника укључених у процес реализације тестирања након евалуације пројекта. Сврха евалуације је унапређење ефикасности и безбедности процеса тестирања кандидата.", "home_eval_subtitle")}
                 </p>
               </div>
 
-              <CommentsSlider />
+              <CommentsSlider inView={commentsInView} ref={commentsRef} />
             </div>
           </div>
 
         </div>
       </div>
 
-      <div className="block relative py-16 lg:py-24">
-        <div className="absolute top-0 left-0 w-full h-full -z-[20] bg-auto bg-repeat shadow-brand" style={{ backgroundImage: `url('${getMediaPathname("dots.png")}')` }}>
-        </div>
-
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-5 gap-10 ">
-            <TeammatesSlider />
-          </div>
-        </div>
-      </div>
+      <TeammatesSlider />
     </>
   );
 }

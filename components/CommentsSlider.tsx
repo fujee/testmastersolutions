@@ -9,7 +9,7 @@ import useEmblaCarousel from "embla-carousel-react";
 import Image from "next/image";
 import { useCallback } from "react";
 
-export default function CommentsSlider() {
+export default function CommentsSlider({ inView, ref }: { inView: boolean, ref: (node?: Element | null) => void }) {
     const { t } = useLang();
 
     const [emblaRef, emblaApi] = useEmblaCarousel(
@@ -63,8 +63,8 @@ export default function CommentsSlider() {
 
     return (
         <>
-            <div className="overflow-hidden w-full mx-3 lg:mx-20 pt-4 relative" ref={emblaRef}>
-                <div className="flex">
+            <div className={`overflow-hidden w-full mx-3 lg:mx-20 pt-4 relative  ${inView ? "visible animate-flipInX delay-500" : ""}`} ref={emblaRef}>
+                <div className="flex" ref={ref}>
                     {sliderData.map((item) => (
                         <div
                             className="flex-shrink-0 basis-full lg:basis-1/2 px-5 relative"
