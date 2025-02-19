@@ -16,7 +16,7 @@ export default function CommentsSlider({ inView, ref }: { inView: boolean, ref: 
         { loop: true, align: "start" },
         [
             Autoplay({
-                delay: 4000,
+                delay: 6000,
                 stopOnInteraction: false,
             }),
         ]

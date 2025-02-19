@@ -18,7 +18,7 @@ export default function HeaderSlider() {
         { loop: true, align: "start" },
         [
             Autoplay({
-                delay: 4000,
+                delay: 7000,
                 stopOnInteraction: false,
             }),
         ]
@@ -61,7 +61,7 @@ export default function HeaderSlider() {
             id: 2,
             title: t("обухваћене све", "home_slide2_title"),
             subtitle: t("Фазе процеса", "home_slide2_subtitle"),
-            description: t("Дизајнирање и генерисање персонализованих тестова, <br/>дистрибуција и пријем материјала, <br/> скенирање тестова и аутоматска обрада, <br/>ручно прегледање и објава резултата, <br/>онлајн приговори и аналитика.", "home_slide2_desc"),
+            description: t("Дизајнирање и генерисање персонализованих тестова, <br/>Дистрибуција и пријем материјала, <br/>Скенирање тестова и аутоматска обрада, <br/>Ручно прегледање и објава резултата, <br/>Онлајн приговори и аналитика.", "home_slide2_desc"),
             img: "slides/3.jpg",
             href: "#phases"
         },
@@ -69,7 +69,7 @@ export default function HeaderSlider() {
             id: 3,
             title: t("О нама говоре", "home_slide3_title"),
             subtitle: t("Наши резултати", "home_slide3_subtitle"),
-            description: t("Спровођење завршних испита на крају основног образовања и васпитања (мала матура),<br/> пријемни испити на мастер студијама,<br/> пријемни испити на основним студијама,<br/> колоквијуми и испити на факултетима", "home_slide3_desc"),
+            description: t("Спровођење завршних испита на крају основног образовања и васпитања (мала матура), <br/>Пријемни испити на мастер студијама, <br/>Пријемни испити на основним студијама, <br/>Колоквијуми и испити на факултетима.", "home_slide3_desc"),
             img: "slides/2.jpg",
             href: "#results"
         },

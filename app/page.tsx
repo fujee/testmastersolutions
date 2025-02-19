@@ -110,7 +110,7 @@ export default function Home() {
             <div className="col-span-1">
               <div className={`${numbersInView ? "visible animate-tada" : ""} text-center my-[15px]`}>
                 <span className="text-[3rem] text-[#1e2236] mb-0 leading-[0.8] font-teko">200+</span>
-                <p className="text-white mt-[6px] leading-[1.4] text-[15px]">{t("реализованих колоквијума и испита на факултету", "home_nums3_title")}</p>
+                <p className="text-white mt-[6px] leading-[1.4] text-[15px]">{t("колоквијума и испита на факултету", "home_nums3_title")}</p>
               </div>
             </div>
 
@@ -286,7 +286,7 @@ export default function Home() {
                   {activeLink === 1 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Дизајнирање тестова", "home_feature_title_1")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Савремена апликација која омогућава флексибилно креирање докумената у различитим форматима, уз једноставно додавање нових алата и елемената. Подржава напредне функције, као што су питања отвореног и затвореног типа, алати за дефинисање бодовања, тачних одговора и прегледање резултата, чиме пружа свеобухватну подршку за процес тестирања и евалуације.", "home_feature_desc_1")}
                       </p>
                     </div>
@@ -297,7 +297,7 @@ export default function Home() {
                   {activeLink === 2 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Генерисање персонализованих тестова", "home_feature_title_2")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Апликација подржава аутоматску припрему докумената за штампу, уз могућност генерисања задатог броја јединствених примерака. Сваки кандидат добија јединствени тест, што обезбеђује да ниједан тест није идентичан, чиме се гарантује висок ниво безбедности и поузданости у процесу тестирања.", "home_feature_desc_2")}
                       </p>
                     </div>
@@ -308,7 +308,7 @@ export default function Home() {
                   {activeLink === 3 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Дистрибуција и пријем материјала", "home_feature_title_3")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Апликација за припрему дистрибуције омогућава организовано паковање и праћење испитног материјала у складу са планом дистрибуције, уз аутоматско генерисање све потребне пратеће документације, као што су налепнице и записници. Апликација за пријем материјала омогућава брзу и ефикасну евиденцију свих пристиглих материјала, чиме се поједностављује процес и осигурава тачност.", "home_feature_desc_3")}
                       </p>
                     </div>
@@ -319,7 +319,7 @@ export default function Home() {
                   {activeLink === 4 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Скенирање тестова", "home_feature_title_4")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Апликација омогућава дигитализацију, валидацију и евидентирање пристиглог испитног материјала, укључујући тестове и идентификационе обрасце. Свака кеса са тестовима се отвара, након чега се исправно попуњени тестови скенирају, валидају и уносе у систем. Идентичан процес се примењује за дигитализацију, валидацију и евидентирање идентификационих образаца, осигуравајући прецизност и интегритет података.", "home_feature_desc_4")}
                       </p>
                     </div>
@@ -330,7 +330,7 @@ export default function Home() {
                   {activeLink === 5 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Аутоматска обрада", "home_feature_title_5")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Путем специјално развијене апликације, током дизајнирања тестова, за свако питање се дефинише начин и број прегледа одговора. У случају вишеструког прегледања, резултати се упоређују, а уколико постоји неслагање, врши се усаглашавање резултата. Одговори на питања затвореног типа се аутоматски оцењују, док се одговори на питања отвореног типа додељују прегледачима који су евидентирани у систему.", "home_feature_desc_5")}
                       </p>
                     </div>
@@ -341,8 +341,8 @@ export default function Home() {
                   {activeLink === 6 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Ручно прегледање", "home_feature_title_6")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
-                        {t("Развијена је посебна апликација која омогућава евидентиранем прегледачима да оцењују одговоре на питања отвореног типа. Одговори се распоређују према предметној области и језику теста. У случају вишеструког прегледања, резултати ће бити упоређени, а уколико постоји неслагање, апликација омогућава усаглашавање резултата и решавање евентуалних приговора.", "home_feature_desc_6")}
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
+                        {t("Развијена је посебна апликација која омогућава евидентираним прегледачима да оцењују одговоре на питања отвореног типа. Одговори се распоређују према предметној области и језику теста. У случају вишеструког прегледања, резултати ће бити упоређени, а уколико постоји неслагање, апликација омогућава усаглашавање резултата и решавање евентуалних приговора.", "home_feature_desc_6")}
                       </p>
                     </div>
                   )}
@@ -352,7 +352,7 @@ export default function Home() {
                   {activeLink === 7 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Објава резултата", "home_feature_title_7")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Увид у резултате омогућен је путем посебно развијене веб апликације. Након пријављивања у систем, кандидат може прегледати резултате свих тестова које је полагао. За сваки тест приказује се укупан број остварених бодова, као и број бодова појединачно за свако питање. На захтев, кандидатима могу бити достављени скенирани и означени тестови путем електронске поште, како би имали комплетан увид у своје одговоре.", "home_feature_desc_7")}
                       </p>
                     </div>
@@ -363,7 +363,7 @@ export default function Home() {
                   {activeLink === 8 && (
                     <div className="h-[200px] flex flex-col justify-start">
                       <p className="mb-5 font-semibold leading-[1.4] text-lg">{t("Онлајн приговори", "home_feature_title_8")}</p>
-                      <p className="text-[#888] text-[15px] leading-[2] m-0">
+                      <p className="text-[#888] text-[15px] leading-[2] m-0 text-justify">
                         {t("Корисницима је омогућено да преко специјализованог портала поднесу приговор на број остварених бодова за свако појединачно питање, а приговор се аутоматски заводи у систем. Портал такође омогућава праћење статуса приговора и одлука надлежних комисија. У зависности од исхода приговора, резултати ће бити аутоматски кориговани. Поред првостепеног, корисник може уложити и другостепени приговор, који се обрађује по истом механизму.", "home_feature_desc_8")}
                       </p>
                     </div>
@@ -395,7 +395,7 @@ export default function Home() {
                     <div className="text-primary text-3xl">
                       <FontAwesomeIcon icon={faBell} />
                     </div>
-                    <p className="text-lg font-semibold mt-1 leading-6">{t("Завршни испити на крају основног образовања", "results_zavrsni_title")}</p>
+                    <p className="text-lg font-semibold mt-1 leading-6">{t("Завршни испит на крају основног образовања", "results_zavrsni_title")}</p>
                   </div>
                   {/* card body */}
                   <div className="text-center">
@@ -416,7 +416,7 @@ export default function Home() {
                       <p className="text-xs text-[#888] font-medium">{t("Ангажованих учесника", "results_ucesnici")}</p>
                     </div>
                     <div className="mb-3 py-2 shadow-resultGroupItem rounded-xl">
-                      <p className="text-primary text-2xl">4 сата</p>
+                      <p className="text-primary text-2xl">4 {t("сата", "results_hours")}</p>
                       <p className="text-xs text-[#888] font-medium">{t("Време прегледања", "results_reviewTime")}</p>
                     </div>
                   </div>
@@ -434,7 +434,7 @@ export default function Home() {
                     <div className="text-primary text-3xl">
                       <FontAwesomeIcon icon={faUniversity} />
                     </div>
-                    <p className="text-lg font-semibold mt-1 leading-6">{t("Пријемни испити на", "results_prijemni_title")}<br /> {t("факултетима", "results_prijemni_title_2")}</p>
+                    <p className="text-lg font-semibold mt-1 leading-6">{t("Пријемни испит на", "results_prijemni_title")}<br /> {t("факултетима", "results_prijemni_title_2")}</p>
                   </div>
                   {/* card body */}
                   <div className="text-center">
@@ -455,7 +455,7 @@ export default function Home() {
                       <p className="text-xs text-[#888] font-medium">{t("Ангажованих учесника", "results_ucesnici")}</p>
                     </div>
                     <div className="mb-3 py-2 shadow-resultGroupItem rounded-xl">
-                      <p className="text-primary text-2xl">30 минута</p>
+                      <p className="text-primary text-2xl">30 {t("минута", "results_minutes")}</p>
                       <p className="text-xs text-[#888] font-medium">{t("Време прегледања", "results_reviewTime")}</p>
                     </div>
                   </div>
@@ -473,7 +473,7 @@ export default function Home() {
                     <div className="text-primary text-3xl">
                       <FontAwesomeIcon icon={faGraduationCap} />
                     </div>
-                    <p className="text-lg font-semibold mt-1 leading-6">{t("Колоквијуми/испити на", "results_kolokvijumi_title")} <br />{t("факултетима", "results_kolokvijumi_title_2")}</p>
+                    <p className="text-lg font-semibold mt-1 leading-6">{t("Колоквијум/испит на", "results_kolokvijumi_title")} <br />{t("факултетима", "results_kolokvijumi_title_2")}</p>
                   </div>
                   {/* card body */}
                   <div className="text-center">
@@ -494,7 +494,7 @@ export default function Home() {
                       <p className="text-xs text-[#888] font-medium">{t("Ангажованих учесника", "results_ucesnici")}</p>
                     </div>
                     <div className="mb-3 py-2 shadow-resultGroupItem rounded-xl">
-                      <p className="text-primary text-2xl">1 сат и 30 минута</p>
+                      <p className="text-primary text-2xl">1 {t("сат", "results_hour")} {t("и", "results_and")} 30 {t("минута", "results_minutes")}</p>
                       <p className="text-xs text-[#888] font-medium">{t("Време прегледања", "results_reviewTime")}</p>
                     </div>
                   </div>
@@ -516,7 +516,7 @@ export default function Home() {
                   {t("Резултати евалуације", "home_eval_title")}
                 </p>
                 <p className={`font-playfair text-[15px] leading-[2] ${commentsInView ? "visible animate-flipInX delay-500" : ""}  mb-20`}>
-                  {t("Неки од коментара учесника укључених у процес реализације тестирања након евалуације пројекта. Сврха евалуације је унапређење ефикасности и безбедности процеса тестирања кандидата.", "home_eval_subtitle")}
+                  {t("Сврха евалуације је унапређење ефикасности и безбедности процеса тестирања кандидата. Неки од коментара учесника укључених у процес реализације тестирања након евалуације пројекта:", "home_eval_subtitle")}
                 </p>
               </div>
 

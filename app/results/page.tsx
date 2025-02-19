@@ -69,7 +69,7 @@ export default function Results() {
                                         <div className="text-primary text-3xl">
                                             <FontAwesomeIcon icon={faBell} />
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Завршни испити на крају основног образовања", "results_zavrsni_title")}</p>
+                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Завршни испит на крају основног образовања", "results_zavrsni_title")}</p>
                                     </div>
                                     {/* card body */}
                                     <div className="text-center">
@@ -108,7 +108,7 @@ export default function Results() {
                                         <div className="text-primary text-3xl">
                                             <FontAwesomeIcon icon={faUniversity} />
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Пријемни испити на", "results_prijemni_title")}<br /> {t("факултетима", "results_prijemni_title_2")}</p>
+                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Пријемни испит на", "results_prijemni_title")}<br /> {t("факултетима", "results_prijemni_title_2")}</p>
                                     </div>
                                     {/* card body */}
                                     <div className="text-center">
@@ -147,7 +147,7 @@ export default function Results() {
                                         <div className="text-primary text-3xl">
                                             <FontAwesomeIcon icon={faGraduationCap} />
                                         </div>
-                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Колоквијуми/испити на", "results_kolokvijumi_title")} <br />{t("факултетима", "results_kolokvijumi_title_2")}</p>
+                                        <p className="text-lg font-semibold mt-1 leading-6">{t("Колоквијум/испит на", "results_kolokvijumi_title")} <br />{t("факултетима", "results_kolokvijumi_title_2")}</p>
                                     </div>
                                     {/* card body */}
                                     <div className="text-center">

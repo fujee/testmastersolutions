@@ -25,7 +25,7 @@ export default function TeammatesSlider() {
         { loop: true, align: "start", active: teamInView },
         [
             Autoplay({
-                delay: 4000,
+                delay: 6000,
                 stopOnInteraction: false,
             }),
         ]
@@ -120,7 +120,7 @@ export default function TeammatesSlider() {
                         <div className="lg:col-span-2 mx-4 lg:ml-16" ref={teamRef}>
                             <p className={`text-primary ${getLang(lang) === "sr-Cyrl-RS" ? "text-[22px]" : "text-[33px]"} font-normal mb-[10px] font-teko visible animate-fadeInDown delay-300`}>{t("Нешто о нама", "home_about_title")}</p>
                             <p className="font-bold mb-5 visible delay-500 animate-flipInX text-[24px] lg:text-[35px]">{t("Реализатори пројекта", "home_about_subtitle")}</p>
-                            <p className={`text-[#888] text-[15px] font-normal leading-[2] ${teamInView ? "visible delay-300 animate-fadeInUp" : ""}`}>
+                            <p className={`text-[#888] text-[15px] font-normal leading-[2] text-justify ${teamInView ? "visible delay-300 animate-fadeInUp" : ""}`}>
                                 {t("У наставку су приказани кључни људи заслужни за идејно решење, имплементацију, реализацију и организацију горе поменутих процеса.", "home_team")}
                             </p>
                             <div className={`${teamInView ? "visible delay-300 animate-fadeInUp" : ""} visible mt-[30px]`}>

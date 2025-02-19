@@ -28,7 +28,7 @@ export default function LanguageChanger({ className, callback, changeTextColor }
 
             <ListboxOptions
                 transition
-                className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg bg-white/80 dark:bg-secondary/90 py-1 text-base dark:text-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm"
+                className="absolute z-10 mt-1 max-h-56 w-full overflow-auto rounded-lg bg-secondary/90 py-1 text-base text-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none data-[closed]:data-[leave]:opacity-0 data-[leave]:transition data-[leave]:duration-100 data-[leave]:ease-in sm:text-sm"
             >
                 {pisma.map((language, index) => (
                     <ListboxOption
