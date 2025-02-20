@@ -10,12 +10,16 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import LanguageChanger from "./LanguageChanger";
 import { useLang } from "@/contexts/langContext";
 import { usePathname } from "next/navigation";
+import { getLang } from "@/common/pismo";
 
 export default function Navbar() {
     const [color, setColor] = useState<boolean>(false);
     const pathname = usePathname();
 
-    const { t } = useLang();
+    const { t, lang } = useLang();
+
+    const tmDarkImageUrl = getLang(lang) === "sr-Cyrl-RS" ? getMediaPathname("logo-dark-cirilica.png") : getMediaPathname("logo-dark.png");
+    const tmLightImageUrl = getLang(lang) === "sr-Cyrl-RS" ? getMediaPathname("logo-light.png") : getMediaPathname("logo-light-latinica.png");
 
     const changeColor = () => {
         if (window.scrollY >= 90) {
@@ -40,7 +44,7 @@ export default function Navbar() {
                     <Link href="/">
                         <Image
                             className="p-3"
-                            src={color || isValidPath(pathname) === false ? getMediaPathname("logo-dark.png") : getMediaPathname("logo-light.png")}
+                            src={color || isValidPath(pathname) === false ? tmDarkImageUrl : tmLightImageUrl}
                             alt="Testmaster Solutions"
                             width={220}
                             height={40}

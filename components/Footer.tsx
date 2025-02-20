@@ -1,13 +1,17 @@
 'use client'
 
 import { getMediaPathname } from "@/common/pathHelper";
+import { getLang } from "@/common/pismo";
 import { useLang } from "@/contexts/langContext";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Footer() {
-    const { t } = useLang();
+    const { t, lang } = useLang();
+
+    const fonImageUrl = getLang(lang) === "en-US" ? getMediaPathname("fon_eng.png") : getLang(lang) === "sr-Latn-RS" ? getMediaPathname("fon_lat.png") : getMediaPathname("fon-logo.png");
+    const tmImageUrl = getLang(lang) === "sr-Cyrl-RS" ? getMediaPathname("logo-light.png") : getMediaPathname("logo-light-latinica.png");
 
     return (
         <div className="bg-[#1e2236] pt-10 lg:pt-20 min-w-fit" id="partners">
@@ -17,7 +21,7 @@ export default function Footer() {
                         <div className="flex justify-center items-center">
                             <Image
                                 className="p-3"
-                                src={getMediaPathname("logo-light.png")}
+                                src={tmImageUrl}
                                 alt="Testmaster Solutions"
                                 width={220}
                                 height={40}
@@ -55,7 +59,7 @@ export default function Footer() {
                         <a href="http://www.fon.bg.ac.rs/" target="_blank">
                             <Image
                                 className="p-3"
-                                src={getMediaPathname("fon-logo.png")}
+                                src={fonImageUrl}
                                 alt="FON"
                                 width={280}
                                 height={100}
